@@ -1,0 +1,10 @@
+.note{
+	background:yellow;
+	min-height: 150px;
+}
+.note span{
+	display: inline-block;
+	position: absolute;
+	right:5px;
+	bottom: 5px;
+}
