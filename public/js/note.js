@@ -54,5 +54,3 @@ var Note = React.createClass({
 	}
 });
 
-React.render(<Note>empty note</Note>, document.querySelector('.content-container'));
-

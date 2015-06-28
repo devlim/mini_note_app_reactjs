@@ -7,15 +7,9 @@
 		<script type="text/javascript" src="lib/js/JSXTransformer-0.13.3.js"></script>
 	</head>
 	<body>
-		<div class="container">
-			<div class="row">
-				<div class="col-md-12 content-container">
-
-				</div>
-			</div>
-		</div>
-		<script type="text/jsx" src="public/js/note.js">
-			
-		</script>
+		
+		<script type="text/jsx" src="public/js/note.js"></script>
+		<script type="text/jsx" src="public/js/board.js"></script>
+		<script type="text/jsx" src="public/js/app.js"></script>
 	</body>
 </html>
