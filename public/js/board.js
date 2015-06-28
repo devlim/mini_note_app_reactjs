@@ -44,7 +44,7 @@ var Board = React.createClass({
 		return (
 			<div className="container">
 				<div className="row">
-					<button className="btn btn-primary glyphicon glyphicon-plus" onClick={this.add}></button>
+					<button className="btn btn-primary glyphicon glyphicon-plus pull-right" onClick={this.add}></button>
 				</div>
 				<div className="row">
 					<div className="col-sm-12 content-container">
