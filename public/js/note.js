@@ -2,7 +2,6 @@ var Note = React.createClass({
 	getInitialState: function(){
 		return {
 			editing:false,
-			text: this.props.children
 		}
 	},
 	remove: function(){
@@ -14,16 +13,16 @@ var Note = React.createClass({
 		});
 	},
 	update: function(){
+		this.props.onChange(this.refs.newText.getDOMNode().value, this.props.index)
 		this.setState({
-			editing: !this.state.editing,
-			text: this.refs.newText.getDOMNode().value
+			editing: !this.state.editing
 		});
 	},
 	displayEdit: function(){
 		return (
 			<div className="note col-md-2">
 				<textarea ref="newText" className="form-group">
-					{this.state.text}
+					{this.props.children}
 				</textarea>
 				<span>
 					<button className="btn btn-success glyphicon glyphicon-floppy-disk" onClick={this.update}></button>
@@ -35,7 +34,7 @@ var Note = React.createClass({
 		return (
 			<div className="note col-md-2">
 				<p>
-					{this.state.text}
+					{this.props.children}
 				</p>
 				<span>
 					<button className="btn btn-primary glyphicon glyphicon-pencil" onClick={this.edit}></button>
