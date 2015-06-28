@@ -10,12 +10,34 @@ var Board = React.createClass({
 			}
 		}
 	},
+	getInitialState: function(){
+		return {
+			notes: [
+				'First note',
+				'Second Note',
+				'Third note'
+			]
+		}
+	},
+	remove: function(i){
+		var arr = this.state.notes;
+		arr.splice(i, 1);
+		this.setState({
+			notes: arr
+		});
+	},
 	render: function(){
 		return (
 			<div className="container">
 				<div className="row">
-					<div className="col-md-12 board">
-					{this.props.count}
+					<div className="col-sm-12 content-container">
+					{
+						this.state.notes.map(function(note, i){
+							return (
+								<Note key={i} index={i} onRemove={this.remove}>{note}</Note>
+								)
+						})
+					}
 					</div>
 				</div>
 			</div>

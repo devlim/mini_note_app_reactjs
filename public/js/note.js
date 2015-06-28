@@ -6,10 +6,9 @@ var Note = React.createClass({
 		}
 	},
 	remove: function(){
-		console.log("delete note");
+		this.props.onRemove(this.props.index);
 	},
 	edit: function(){
-		console.log("editing text");
 		this.setState({
 			editing: !this.state.editing
 		});
@@ -23,7 +22,7 @@ var Note = React.createClass({
 	displayEdit: function(){
 		return (
 			<div className="note col-md-2">
-				<textarea ref="newText" class="form-group">
+				<textarea ref="newText" className="form-group">
 					{this.state.text}
 				</textarea>
 				<span>
